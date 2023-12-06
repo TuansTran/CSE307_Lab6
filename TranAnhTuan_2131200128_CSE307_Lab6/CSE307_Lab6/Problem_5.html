@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Problem 5</title>
+    <script>
+        function positiveInteger() {
+            var n = document.getElementById("getNum").value;
+            var kq = "";
+            if (isNaN(n)) {
+                alert("Please input a positive integer");
+            } else {
+                if (n <= 0) {
+                    alert("Please input a positive integer");
+                } else {
+                    for (i = 1; i <= n; i++) {
+                        kq+=i+" ";
+                    }
+                }
+            }
+            document.getElementById("res").innerHTML = kq;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>
+        Numbers form 1 to N
+    </h1>
+    <div>
+        <label for="getNum">Enter a positive integer: </label>
+        <input type="text" id="getNum">
+        <button onclick="positiveInteger()">Print</button>
+    </div>
+    <div id="res">
+
+    </div>
+</body>
+
+</html>

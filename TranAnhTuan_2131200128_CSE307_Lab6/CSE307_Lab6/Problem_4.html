@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 4</title>
+</head>
+
+
+<body>
+
+    <script>
+        let products = [
+            {
+                "ID": 1,
+                "Product_Name": "book_1",
+                "Quantity": 200,
+                "Price": 100,
+                "Image": "https://kilala.vn/data/upload/article/3407/truyen%201Q84%20(5).jpg"
+            },
+            {
+                "ID": 2,
+                "Product_Name": "book_2",
+                "Quantity": 300,
+                "Price": 200,
+                "Image": "https://kilala.vn/data/upload/article/3407/truyen%201Q84%20(5).jpg"
+            }];
+        console.log('Show products.');
+        for (let i = 0; i < products.length; i++) {
+            console.log(products[i]);
+        }
+        console.log("Search.");
+        function SearchByName(products) {
+            return products.Product_Name === "book_1";
+        }
+        var product = products.find(SearchByName);
+        console.log(product);
+        console.log("Remove and Add")
+        var product1 = {
+            "ID": 945,
+            "Product_Name": "book_3",
+            "Quantity": 500,
+            "Price": 100,
+            "Image": "https://kilala.vn/data/upload/article/3407/truyen%201Q84%20(5).jpg"
+        }
+        products.push(product1);
+        for (let i = 0; i < products.length; i++) {
+            console.log(products[i]);
+        }
+       
+        products.pop()
+        console.log("Deleted.")
+        for (let i = 0; i < products.length; i++) {
+            console.log(products[i]);
+        }
+        console.log('Information Adjusted.')
+   
+        function SearchByID(products) {
+            return products.ID === 456
+        }
+        products[0].Product_Name = 'book_4'
+        products[1].Product_Name = 'book_5'
+        products[1].Price = 2000;
+        products.find(SearchByID).Quantity = 10;
+        for (let i = 0; i < products.length; i++) {
+            console.log(products[i]);
+        }
+
+    </script>
+</body>
+
+</html>

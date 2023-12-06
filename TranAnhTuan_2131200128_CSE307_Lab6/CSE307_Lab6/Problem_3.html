@@ -1,0 +1,55 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 3</title>
+    </style>
+    <script>
+        function showBooKs(){
+            let books = [
+                {
+                    "title": "The Icepick Surgeon",
+                    "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    "price": 17
+
+                },
+                {
+                    "title": "Rich dad, Poor dad",
+                    "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    "price": 14
+
+                },
+                {
+                    "title": "Bible",
+                    "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    "price": 18
+
+                }
+            ];
+
+            books.sort(function (a, b) {
+                return a.price - b.price;
+            });
+            
+
+
+            for (i = 0; i < books.length; i++) {
+                document.getElementById('result').innerHTML += ` <div style='flex:30%;border-style: solid;text-align:center'>
+                        <p id='title'>${books[i].title}</p>
+                        <img id='img' width=200, height = auto
+                            src='${books[i].image}' />
+                        <p id='price'>
+                            ${books[i].price} $
+                        </p>
+                    </div>`;
+            }
+        }
+    </script>
+
+</head>
+<body onload="showBooKs()">
+
+    <div id='result' style="display: flex; border-style: solid;"></div>
+
+</body>
+</html>
